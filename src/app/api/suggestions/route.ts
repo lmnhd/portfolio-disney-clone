@@ -2,7 +2,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const term = searchParams.get('term')
 
-    if(!term) return null
+    
 
     const res = await fetch(`https://disney-clone-openai.azurewebsites.net/api/getaisuggestion?term=${term}`,{
         method: "GET",
